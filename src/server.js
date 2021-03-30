@@ -5,7 +5,7 @@ const routes = require("./routes")
 
 server.set('view engine', 'ejs')
 
-server.use(express.static("public"))+
+server.use(express.static("public"))
 server.use(routes)
 
 
