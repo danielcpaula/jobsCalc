@@ -25,10 +25,11 @@ module.exports = {
     const valueHour = data["monthly-budget"] / monthTotalHours
 
     const profile = await Profile.get()
+
     await Profile.update({
       ...profile,
       ...req.body,
-      "value-hour": valueHour,
+      "value-hour": valueHour
     }) 
 
     return res.redirect('/profile')
