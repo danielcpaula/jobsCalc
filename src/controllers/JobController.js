@@ -8,8 +8,8 @@ module.exports = {
     return res.render("job")
   },
 
-  save(req, res) {
-    const jobs = Job.get()
+  async save(req, res) {
+    const jobs = await Job.get()
     const lastId = jobs[jobs.length - 1]?.id || 0;
 
     Job.create({
